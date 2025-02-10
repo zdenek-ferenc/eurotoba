@@ -1,0 +1,30 @@
+.background {
+    display: flex;
+    flex-grow: 1;
+    background: url(../assets/1.jpg) no-repeat center center;
+    background-size: cover; /* Zajistí, že obrázek bude responsivní a pokryje celý element */
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.background img{
+    width:50%;
+    opacity: 0;
+}
+
+
+.hero-quote {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left:-35%;
+    width: 20%;
+    border-radius: 0px;
+}
+
+.hero-quote h1{
+    font-weight: 800;
+    font-size: 4.6vw;
+}

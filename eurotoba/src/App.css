@@ -1,0 +1,14 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Zajišťuje správnou výšku */
+    scroll-behavior: smooth;
+  }
+
+
+.hero-section {
+    height: 100vh; /* Zabírá celou výšku obrazovky */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+  }

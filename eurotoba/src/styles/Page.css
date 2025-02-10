@@ -1,0 +1,114 @@
+.section-template {
+    margin-top: 3vw;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-container {
+  display: flex;
+  margin: auto;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 6rem;
+  padding: 2vw 10%;
+}
+
+.section-container img {
+  object-fit:contain;
+  aspect-ratio: 1/1;
+  width: 40%;
+  height: 40%;
+}
+
+.section-title{
+    display:flex;
+    justify-content: center;
+    text-transform: uppercase;
+    color: #84C547;
+    font-weight: 800;
+}
+
+.section-description{
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    display:flex;
+    width:50%;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    font-size: 1.2vw;
+}
+
+.section-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  .section-image {
+    width: 400px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+
+  .section-contact {
+    display: flex;
+    justify-content: center;
+  }
+
+  .contact-description {
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    display:flex;
+    width:50%;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    font-size: 1vw;
+    padding: 2vw 0;
+  }
+
+  .contact-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1vw 2.4vw;
+    background: #84C547;
+    color: #fff;
+    border-radius: 35px;
+    font-size: 1.3vw;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: .3s;
+    margin-bottom: 5rem;
+    margin-top: 2rem;
+  }
+
+  .contact-button:hover{
+    transform: scale(0.98);
+    background:#629b33
+  }
+ 
+  @media (max-width: 1200px) {
+    .section-image {
+      width: 45%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .section-image {
+      width: 100%;
+    }
+  }
+

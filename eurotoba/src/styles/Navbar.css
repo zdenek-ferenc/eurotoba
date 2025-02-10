@@ -1,0 +1,139 @@
+.navbar {
+    background-color: #ffffff;
+    color: #65A531;
+    height: 11vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 0 2%; /* Přidá mezery kolem obsahu */
+}
+
+/* LOGO */
+.logo-container {
+    display: flex;
+    align-items:center;
+}
+
+.logo-container img {
+    height: 50px;
+}
+
+/* Navigační odkazy */
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #84C547;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    transform: scale(1.02);
+    color: #629b33;
+}
+
+/* Hamburger menu */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    width: 40px; /* Pevná šířka hamburger menu */
+    height: 40px; /* Pevná výška hamburger menu */
+    justify-content: center;
+    align-items: center;
+    margin-right: 0; /* Odstraň nadbytečný margin */
+    position: absolute; /* Pozicování hamburger menu */
+    right: 8%; /* Zarovnej hamburger od pravého okraje */
+}
+
+/* Linie hamburger menu */
+.menu-icon .line {
+    width: 30px;
+    height: 3px;
+    background-color: #65A531;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.menu-icon.open .line:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+}
+
+.menu-icon.open .line:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.open .line:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+}
+
+/* Dropdown menu - skrytý na menších obrazovkách */
+.nav-links {
+    display: flex;
+}
+
+.nav-links.active {
+    display: flex; /* Zobrazí se pouze při aktivaci */
+}
+
+/* Responzivní změny */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Skryj menu na menších obrazovkách */
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        left: 0; /* Zarovnání vlevo */
+        width: 100%; /* Zajistí, že menu zabere celou šířku */
+        background-color: #ffffff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 1rem 2%; /* Zajistí vyrovnání obsahu */
+        z-index: 100;
+    }
+
+    .nav-links.active {
+        display: flex; /* Zobrazí se při aktivaci hamburger menu */
+    }
+
+    .menu-icon {
+        display: flex; /* Zobraz hamburger menu */
+    }
+
+    
+}
+
+/* Zmenšení velikosti při zmenšení stránky */
+@media (max-width: 1200px) {
+    .nav-links {
+        gap: 1.5rem; /* Menší mezery mezi položkami */
+    }
+
+    .nav-links a {
+        font-size: 0.8rem; /* Menší písmo odkazu */
+    }
+
+    .logo-container img {
+        height: 40px; /* Menší logo */
+    }
+}
+
+@media (max-width: 887px) {
+    .logo-container img {
+        height: 30px; /* Ještě menší logo na mobilních zařízeních */
+    }
+
+    .nav-links a {
+        font-size: 0.7rem; /* Zmenšení písma odkazu */
+    }
+}
